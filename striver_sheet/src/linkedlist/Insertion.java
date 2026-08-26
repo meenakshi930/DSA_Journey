@@ -11,7 +11,7 @@ public class Insertion {
     }
     private static Node insertEnd(Node head,int val) {
     	if(head==null) {
-    		return null;
+    		 return new Node(val);
     	}
     	Node temp=head;
     	while(temp.next!=null) {
