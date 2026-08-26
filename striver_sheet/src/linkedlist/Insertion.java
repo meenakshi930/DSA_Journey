@@ -31,16 +31,17 @@ public class Insertion {
     		}
     	}
     	if(k==1) {
-    	return new Node(element);
+    	    Node newNode = new Node(element);
+            newNode.next = head;
+            return newNode;
     	}
     	int count=0;
     	Node temp=head;
     	while(temp!=null) {
     		count++;
     		if(count==(k-1)) {
-    			Node newNode =new Node(element);
-    			temp.next= newNode;
-    			break;
+    			newNode.next = temp.next;
+                temp.next = newNode;
     		}
     		temp=temp.next;
     	}
